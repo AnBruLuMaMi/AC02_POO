@@ -1,12 +1,24 @@
+/*
+AndrÃ© Lucas Fabbris de Toledo: 1902777
+
+Bruno Alkimim: 1902646
+
+Lucas de Alencar Silva: 1902989
+
+Mariana Rodrigues Zubi da Silva: 1904204
+
+Milena Bispo Gomes: 1904052
+*/
+
 package atvBancos;
 
 import java.util.Random;
 
 public class ContaBancaria {
-	 private static int ultimoNumeroConta = 1000; // Último número de conta utilizado
+	 private static int ultimoNumeroConta = 1000; // Ãšltimo nÃºmero de conta utilizado
 	 
 	    private String correntista;
-	    private int numeroConta; // número da conta
+	    private int numeroConta; // nÃºmero da conta
 	    private double saldo; // saldo da conta
 	    private String senha; //senha da conta
 	    private double cpmf; //cpmf cobrado da conta
