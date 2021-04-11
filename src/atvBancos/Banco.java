@@ -1,3 +1,15 @@
+/*
+AndrÃ© Lucas Fabbris de Toledo: 1902777
+
+Bruno Alkimim: 1902646
+
+Lucas de Alencar Silva: 1902989
+
+Mariana Rodrigues Zubi da Silva: 1904204
+
+Milena Bispo Gomes: 1904052
+*/
+
 package atvBancos;
 
 import java.util.Scanner;
@@ -17,13 +29,13 @@ public class Banco {
 	        int indiceConta = -1;
 	        while (!clienteValido) {
 	            mostrarInfo(contas);
-	            System.out.print("O saque será efetuado na conta de qual cliente? (0 a " + (contas.length - 1) + "): ");
+	            System.out.print("O saque serÃ¡ efetuado na conta de qual cliente? (0 a " + (contas.length - 1) + "): ");
 	            indiceConta = entrada.nextInt();
 
 	            if (indiceConta >= 0 && indiceConta < contas.length) {
 	                clienteValido = true;
 	            } else {
-	                System.out.println("Índice de cliente inválido!");
+	                System.out.println("Ãndice de cliente invÃ¡lido!");
 	            }
 	        }
 	 
@@ -38,17 +50,17 @@ public class Banco {
 	        int indiceConta = -1;
 	        while (!clienteValido) {
 	            mostrarInfo(contas);
-	            System.out.print("O Deposito será efetuado na conta de qual cliente? (0 a " + (contas.length - 1) + "): ");
+	            System.out.print("O Deposito serÃ¡ efetuado na conta de qual cliente? (0 a " + (contas.length - 1) + "): ");
 	            indiceConta = entrada.nextInt();
 
 	            if (indiceConta >= 0 && indiceConta < contas.length) {
 	                clienteValido = true;
 	            } else {
-	                System.out.println("Índice de cliente inválido!");
+	                System.out.println("Ãndice de cliente invÃ¡lido!");
 	            }
 	        }
 	        
-	        System.out.println("Qual o valor do depósito? ");
+	        System.out.println("Qual o valor do depÃ³sito? ");
 	        double deposito = entrada.nextDouble();
 	        contas[indiceConta].depositar(deposito);
 	        System.out.println("Deposito finalizado. \n");
@@ -65,20 +77,20 @@ public class Banco {
 	            if (indiceContaTransf >= 0 && indiceContaTransf < contas.length) {
 	                clienteValidoTransf = true;
 	            } else {
-	                System.out.println("Índice de cliente inválido!");
+	                System.out.println("Ãndice de cliente invÃ¡lido!");
 	            }
 	        }
 	        boolean clienteValidoRecep = false;
 	        int indiceContaRecep = -1;
 	        while (!clienteValidoRecep) {
 	            mostrarInfo(contas);
-	            System.out.print("A Transferencia será efetuada para a conta de qual cliente? (0 a " + (contas.length - 1) + "): ");
+	            System.out.print("A Transferencia serÃ¡ efetuada para a conta de qual cliente? (0 a " + (contas.length - 1) + "): ");
 	            indiceContaRecep = entrada.nextInt();
 
 	            if (indiceContaRecep >= 0 && indiceContaRecep < contas.length) {
 	                clienteValidoRecep = true;
 	            } else {
-	                System.out.println("Índice de cliente inválido!");
+	                System.out.println("Ãndice de cliente invÃ¡lido!");
 	            }
 	        }
 	        
@@ -91,22 +103,22 @@ public class Banco {
 	    public static void main(String[] args) {
 	        ContaBancaria[] contas = new ContaBancaria[5];
 	        contas[0] = new ContaBancaria("Marcos", 1000.00);
-	        contas[1] = new ContaBancaria("Júlia", 250.00);
-	        contas[2] = new ContaBancaria("João", 2500.00);
+	        contas[1] = new ContaBancaria("JÃºlia", 250.00);
+	        contas[2] = new ContaBancaria("JoÃ£o", 2500.00);
 	        contas[3] = new ContaBancaria("Roberto", 3000.00);
-	        contas[4] = new ContaBancaria("Janaína", 4500.00);
+	        contas[4] = new ContaBancaria("JanaÃ­na", 4500.00);
 	 
 	        entrada = new Scanner(System.in);
 	        boolean sair = false;
 	 
 	        while (!sair) {
-	            System.out.println("Escolha uma operação:");
-	            System.out.println("(1) mostrar informações de todas as contas");
+	            System.out.println("Escolha uma operaÃ§Ã£o:");
+	            System.out.println("(1) mostrar informaÃ§Ãµes de todas as contas");
 	            System.out.println("(2) sacar");
 	            System.out.println("(3) depositar");
 	            System.out.println("(4) transferir");
 	            System.out.println("(5) sair");
-	            System.out.print("Opção escolhida: ");
+	            System.out.print("OpÃ§Ã£o escolhida: ");
 	            int escolha = entrada.nextInt();
 	            System.out.println();
 	 
@@ -127,7 +139,7 @@ public class Banco {
 	                sair = true;
 	                break; 
 	            default:
-	                System.out.println("Opção inválida!");
+	                System.out.println("OpÃ§Ã£o invÃ¡lida!");
 	            }
 	            System.out.println();
 	        }
